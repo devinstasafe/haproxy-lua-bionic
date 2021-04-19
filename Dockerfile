@@ -2,7 +2,10 @@ FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y curl git make libssl1.0-dev build-essential
 
-RUN apt-get update && apt-get install -y  haproxy liblua5.3-dev lua5.3 m4
+RUN apt-get update && apt-get install -y liblua5.3-dev lua5.3 m4
+RUN apt-get install --no-install-recommends software-properties-common
+RUN add-apt-repository ppa:vbernat/haproxy-2.2
+RUN apt-get install haproxy=2.2.\*
 RUN apt install make
 
 RUN lua5.3 -v
