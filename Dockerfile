@@ -23,3 +23,5 @@ RUN apt update && apt install nodejs -y
 RUN node -v
 
 RUN npm -v
+
+RUN cat /etc/haproxy/haproxy.cfg
