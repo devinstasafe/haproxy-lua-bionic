@@ -24,4 +24,6 @@ RUN node -v
 
 RUN npm -v
 
+RUN haproxy -v
+
 RUN cat /etc/haproxy/haproxy.cfg
